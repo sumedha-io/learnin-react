@@ -22,3 +22,11 @@
 ```
 - The children attribute helps in wrapping  components under  UserContextProvider
 - tailwind css provides className called dark that automatically assigns changes to be set in the darkmode and under dark we can set styling in dark mode explicitly dark:text-white
+- Redux: Comprises of store, reducers,
+- slice contains name, state(initialState) ,reducers, useSelector, useDispatch
+- reducers : object having feature: function
+- every function under reducers will have two parameters state(present state) and action(the argument passed by the user while using this function in any component)
+- slice.actions(object) contains the functions in the reducers
+- slices have to export their reducer such that the store takes it
+- useDispatch(reducer(parameter)) sets values of the state
+- useSelector(reducer(parameter)) gets values of the state
