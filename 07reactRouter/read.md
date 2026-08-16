@@ -1,0 +1,1 @@
+- callback functions in className enables a special property called isActive
