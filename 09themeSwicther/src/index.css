@@ -1,0 +1,5 @@
+
+@import "tailwindcss";
+
+/* 💡 This tells Tailwind v4 to look for a manual utility class trigger */
+@custom-variant dark (&:where(.dark, .dark *));
