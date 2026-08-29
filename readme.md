@@ -30,3 +30,8 @@
 - slices have to export their reducer such that the store takes it
 - useDispatch(reducer(parameter)) sets values of the state
 - useSelector(reducer(parameter)) gets values of the state
+# Blog App
+## Initial steps
+- Appwrite deals with the backend
+- npm i @reduxjs/toolkit react-redux react-router-dom appwrite@tinymce/tinymce-react html-react-parser react-hook-form
+- .env should never be on git hence gitignore
