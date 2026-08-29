@@ -31,3 +31,6 @@
 - useDispatch(reducer(parameter)) sets values of the state
 - useSelector(reducer(parameter)) gets values of the state
 -  <img width="831" height="407" alt="image" src="https://github.com/user-attachments/assets/6b24d501-414e-4676-aca1-686291842589" />
+- Redux is a core library while react-redux is its implementation in react
+- Every application must have a single store called the single source of truth
+- The reducer in the store will get access to every slice's elements
