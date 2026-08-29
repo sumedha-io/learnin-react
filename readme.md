@@ -30,3 +30,4 @@
 - slices have to export their reducer such that the store takes it
 - useDispatch(reducer(parameter)) sets values of the state
 - useSelector(reducer(parameter)) gets values of the state
+-  <img width="831" height="407" alt="image" src="https://github.com/user-attachments/assets/6b24d501-414e-4676-aca1-686291842589" />
