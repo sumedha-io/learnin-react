@@ -30,8 +30,13 @@
 - slices have to export their reducer such that the store takes it
 - useDispatch(reducer(parameter)) sets values of the state
 - useSelector(reducer(parameter)) gets values of the state
+- Advantage of redux over contextapi is that ; use of useState, useEffect and spread operator can be avoided because redux always holds the updated state
 # Blog App
 ## Initial steps
 - Appwrite deals with the backend
 - npm i @reduxjs/toolkit react-redux react-router-dom appwrite@tinymce/tinymce-react html-react-parser react-hook-form
 - .env should never be on git hence gitignore
+- The appwrite folder contains the backend and database functions
+- Classes are created which comprises of constructors. The variables inside constructors can be accessed by any function defined inside the class.
+- The object of a class is exported such that functions in every class can be accessed directly using dot operator
+- The store folder consists of the store from redux that helps in knowing login and logout status and userData in throughout the frontend

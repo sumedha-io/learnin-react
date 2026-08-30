@@ -63,6 +63,70 @@ export class Service{
         }
     }
 
+    async getPost(slug){
+        try {
+            return await this.databases.getDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug
+            )
+        } catch (error) {
+            console.log("Appwrite service :: getPost :: error", error);
+            return false
+        }
+    }
+    //queries can be used on indexed columns
+    //Query is used so that we can only get posts whose status is active
+    async getPosts(queries=[Query.equal('status','active')]){
+        try {
+            return await this.databases.listDocuments(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                /*
+                [Query.equal('status','active')], can be directly written
+                */
+                queries,
+            )
+        } catch (error) {
+            console.log("Appwrite service :: getPosts :: error", error);
+            return false
+        }
+    }
+
+    //file upload service or method
+    async uploadFile(file){
+        try {
+            return await this.bucket.createFile(
+                conf.appwriteBucketId,
+                ID.unique(),
+                file
+            )
+        } catch (error) {
+            console.log("Appwrite service :: uploadFile :: error", error);
+            return false
+        }
+    }
+
+    async deleteFile(fileId){
+        try {
+            await this.bucket.deleteFile(
+                conf.appwriteBucketId,
+                fileId
+            )
+            return true
+        } catch (error) {
+            console.log("Appwrite service :: deleteFile :: error", error);
+            return false
+        }
+    }
+
+    getFilePreview(fileId){
+        return this.bucket.getFilePreview(
+            conf.appwriteBucketId,
+            fileId
+        )
+    }
+
 }
 
 const service = new Service()
