@@ -34,3 +34,14 @@
 - Redux is a core library while react-redux is its implementation in react
 - Every application must have a single store called the single source of truth
 - The reducer in the store will get access to every slice's elements
+- Advantage of redux over contextapi is that ; use of useState, useEffect and spread operator can be avoided because redux always holds the updated state
+# Blog App
+## Initial steps
+- Appwrite deals with the backend
+- npm i @reduxjs/toolkit react-redux react-router-dom appwrite@tinymce/tinymce-react html-react-parser react-hook-form
+- .env should never be on git hence gitignore
+- The appwrite folder contains the backend and database functions
+- Classes are created which comprises of constructors. The variables inside constructors can be accessed by any function defined inside the class.
+- The object of a class is exported such that functions in every class can be accessed directly using dot operator
+- The store folder consists of the store from redux that helps in knowing login and logout status and userData in throughout the frontend
+
