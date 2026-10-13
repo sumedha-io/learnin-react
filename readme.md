@@ -44,4 +44,6 @@
 - Classes are created which comprises of constructors. The variables inside constructors can be accessed by any function defined inside the class.
 - The object of a class is exported such that functions in every class can be accessed directly using dot operator
 - The store folder consists of the store from redux that helps in knowing login and logout status and userData in throughout the frontend
-
+- If the same html element is repeated adding keys is neccessary like li's in ul
+- navigate is used as an alternative to link
+- Forward Reference : The state of a component is passed to its parent component too. If there are multiple input fields for passwords, username,etc, so the parent should know the state too hence reference is passed. Helps in implementation of onChange onClick,etc so that state of that particular field is received by parent

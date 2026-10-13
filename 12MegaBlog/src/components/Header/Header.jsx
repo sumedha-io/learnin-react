@@ -3,8 +3,9 @@ import {Container, Logo, LogoutBtn} from '../index'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
+
 const Header = () => {
-    const authStatus = useSelector((state) => state.auth.status)
+    const authStatus = useSelector((state) => state.auth.status)//auth is the name of the slice 
     const navigate = useNavigate()
 
     const navItems = [
@@ -45,6 +46,23 @@ const Header = () => {
                         <Logo />
                     </Link>
                 </div>
+                <ul
+                className='flex ml-auto'
+                >
+                    {navItems.map((item)=>
+                        item.active? (<li key={item.name}>
+                            <button
+                            onClick={()=> navigate(item.slug)}//slug contains /page
+                            className='inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
+                            >
+                                {item.name}
+                            </button>
+                        </li>):null
+                    )}
+                    {authStatus && (<li>
+                        <LogoutBtn/>
+                    </li>)}
+                </ul>
             </nav>
         </Container>
     </header>
